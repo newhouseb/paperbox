@@ -3,10 +3,6 @@ from urllib import unquote
 
 app = Chalice(app_name='bookmark')
 
-@app.route('/')
-def index():
-    return {"hi": "bye"}
-
 @app.route('/bookmark/{tosave}')
 def bookmark(tosave):
     return Response(
